@@ -1,0 +1,16 @@
+const mongoose = require('mongoose');
+
+const settingsSchema = new mongoose.Schema({
+  userId: { type: String, required: true, unique: true }, // Links to the user
+  communitySharing: { type: Boolean, default: false }, // Checkbox for community sharing
+  createdAt: { type: Date, default: Date.now },
+  updatedAt: { type: Date, default: Date.now }
+});
+
+// Update updatedAt on save
+settingsSchema.pre('save', function (next) {
+  this.updatedAt = Date.now();
+  next();
+});
+
+module.exports = mongoose.model('Settings', settingsSchema);
