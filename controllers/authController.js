@@ -17,8 +17,8 @@ const firebaseConfig = {
   storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
   messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.FIREBASE_APP_ID,
-  iosClientId: process.env.FIREBASE_IOS_CLIENT_ID, // e.g., "com.example.app.ios"
-  androidClientId: process.env.FIREBASE_ANDROID_CLIENT_ID, // e.g., "com.example.app.android"
+  // iosClientId: process.env.FIREBASE_IOS_CLIENT_ID, // e.g., "com.example.app.ios"
+  // androidClientId: process.env.FIREBASE_ANDROID_CLIENT_ID, // e.g., "com.example.app.android"
 };
 
 firebaseClient.initializeApp(firebaseConfig);
