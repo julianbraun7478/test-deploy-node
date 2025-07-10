@@ -84,7 +84,9 @@ app.use('/api/sessions', require('./routes/session'));
 app.use('/api/tiers', require('./routes/tiers'));
 app.use('/api/affiliates', require('./routes/affiliates'));
 app.use('/api/affiliate-reports', require('./routes/reports'));
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+app.get('/api-docs', (req, res) => {
+  res.redirect('/swagger.html');
+});
 
 app.get('/', (req, res) => {
   res.send('Louis Backend is running!');

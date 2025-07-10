@@ -11,5 +11,8 @@
         "src": "/(.*)",
         "dest": "index.js"
       }
+    ],
+    "rewrites": [
+      { "source": "/api-docs", "destination": "/swagger.html" }
     ]
   }
