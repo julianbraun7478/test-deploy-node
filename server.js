@@ -31,7 +31,7 @@ connectDB();
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
-
+app.use(express.static(__dirname + '/public'));
 // Attach io to app for use in routes
 app.set('io', io);
 // Security middleware
